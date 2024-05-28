@@ -3,6 +3,8 @@
 See official documentation here: https://codefresh.io/docs/docs/installation/gitops/hybrid-gitops-helm-installation/
 
 
+
+
 ## To adopt argoproj crds:
 
 1. Make sure kubectl is on the runtime cluster context
@@ -14,6 +16,6 @@ run
 ```shell
 kubectl logs jobs/validate-values -n ${NAMESPACE}
 ```
-(use your selected namespace)  
+(use your selected namespace)
 the output should help find the error in the values file.
 in order to install while skipping the values validation, install with `--set installer.skipValidation="true"` (or set it in values file)
