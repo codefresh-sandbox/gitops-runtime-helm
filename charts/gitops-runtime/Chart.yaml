@@ -1,8 +1,8 @@
 apiVersion: v2
-appVersion: 0.1.48
+appVersion: 0.1.47
 description: A Helm chart for Codefresh gitops runtime
 name: gitops-runtime
-version: 0.7.0
+version: 0.9.0
 home: https://github.com/codefresh-io/gitops-runtime-helm
 icon: https://avatars1.githubusercontent.com/u/11412079?v=3
 keywords:
@@ -13,36 +13,72 @@ maintainers:
     url: https://codefresh-io.github.io/
 annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
-  artifacthub.io/changes: |
-    - kind: security
-      description: "Add redis authentication to ArgoCD"
-    - kind: changed
-      description: "Updated ArgoCD templates - please note that this version of the ArgoCD templates contains a breaking change for ArgoCD server ingress value structure - runtime ingress is not affected. Only relevant if argo-cd.server.ingress.enabled is true. For the new ingress value structure please see: https://github.com/codefresh-io/argo-helm/blob/f98f2f4d4aca081e7b26cbb1a3fcec138bb3d4ac/charts/argo-cd/values.yaml#L2126-L2329"
+  artifacthub.io/changes: |-
+    - type: changed
+      description: test
+    - type: changed
+      description: test
+    - type: changed
+      description: test
+    - type: changed
+      description: test
+    - type: changed
+      description: test
+    - type: changed
+      description: test
+    - type: changed
+      description: test
+    - type: changed
+      description: test
+    - type: changed
+      description: Release 0.7.0 - Add Redis authentication to ArgoCD and update ArgoCD templates (#202)
+    - type: changed
+      description: 'Merge pull request #200 from codefresh-io/release-0.6.1'
+    - type: changed
+      description: trigger
+    - type: changed
+      description: 'Merge pull request #201 from codefresh-io/CR-23728'
+    - type: changed
+      description: readme
+    - type: changed
+      description: fix sealed secret shearing among clusters
+    - type: changed
+      description: 'Merge pull request #199 from codefresh-io/CR-23328-product-crd'
+    - type: changed
+      description: 'feat: added isConfigurationRuntime field (#195)'
+    - type: changed
+      description: Merge branch 'release-0.6.1' of github.com:codefresh-io/gitops-runtime-helm into CR-23328-product-crd
+    - type: changed
+      description: Change ArgoCD chart version
+    - type: changed
+      description: update README.md
+    - type: changed
+      description: 'version: 1.0.13'
 dependencies:
-- name: argo-cd
-  repository: https://codefresh-io.github.io/argo-helm
-  version: 6.7.18-3-cap-2.10-2024.5.14-9315e75e1
-- name: argo-events
-  repository: https://codefresh-io.github.io/argo-helm
-  version: 2.0.9-1-cap-CR-19893
-- name: argo-workflows
-  repository: https://codefresh-io.github.io/argo-helm
-  version: 0.40.9-1-v3.5.4-cap-CR-22243
-  condition: argo-workflows.enabled
-- name: argo-rollouts
-  repository: https://codefresh-io.github.io/argo-helm
-  version: 2.32.5-4-additional-logs
-  condition: argo-rollouts.enabled
-- name: sealed-secrets
-  repository: https://bitnami-labs.github.io/sealed-secrets/
-  version: 2.14.1
-- name: codefresh-tunnel-client
-  repository: oci://quay.io/codefresh/charts
-  version: 0.1.15
-  alias: tunnel-client
-  condition: tunnel-client.enabled
-- name: codefresh-gitops-operator
-  repository: oci://quay.io/codefresh/charts
-  version: 1.0.13
-  alias: gitops-operator
-  condition: gitops-operator.enabled
+  - name: argo-cd
+    repository: https://codefresh-io.github.io/argo-helm
+    version: 6.7.18-3-cap-2.10-2024.5.14-9315e75e1
+  - name: argo-events
+    repository: https://codefresh-io.github.io/argo-helm
+    version: 2.0.9-1-cap-CR-19893
+  - name: argo-workflows
+    repository: https://codefresh-io.github.io/argo-helm
+    version: 0.40.9-1-v3.5.4-cap-CR-22243
+    condition: argo-workflows.enabled
+  - name: argo-rollouts
+    repository: https://codefresh-io.github.io/argo-helm
+    version: 2.32.5-4-additional-logs
+    condition: argo-rollouts.enabled
+  - name: sealed-secrets
+    repository: https://bitnami-labs.github.io/sealed-secrets/
+    version: 2.14.1
+  - name: codefresh-tunnel-client
+    repository: oci://quay.io/codefresh/charts
+    version: 0.1.15
+    alias: tunnel-client
+    condition: tunnel-client.enabled
+  - name: codefresh-gitops-operator
+    repository: oci://quay.io/codefresh/charts
+    version: 1.0.13
+    alias: gitops-operator
+    condition: gitops-operator.enabled
