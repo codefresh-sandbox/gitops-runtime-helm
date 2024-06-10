@@ -17,6 +17,8 @@ annotations:
     - type: changed
       description: 'chore(auto): update Chart.yaml'
     - type: changed
+      description: 'chore(auto): update Chart.yaml'
+    - type: changed
       description: test
     - type: changed
       description: test
