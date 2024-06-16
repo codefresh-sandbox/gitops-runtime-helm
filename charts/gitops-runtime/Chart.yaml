@@ -1,8 +1,8 @@
 apiVersion: v2
-appVersion: 0.1.47
+appVersion: 0.1.48
 description: A Helm chart for Codefresh gitops runtime
 name: gitops-runtime
-version: 0.9.0
+version: 0.9.1
 home: https://github.com/codefresh-io/gitops-runtime-helm
 icon: https://avatars1.githubusercontent.com/u/11412079?v=3
 keywords:
@@ -15,55 +15,7 @@ annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
   artifacthub.io/changes: |-
     - type: changed
-      description: test update values
-    - type: changed
-      description: test duplicate 4
-    - type: changed
-      description: test duplicate 3
-    - type: changed
-      description: test duplicate 2
-    - type: changed
-      description: test double-trigger
-    - type: changed
-      description: test
-    - type: changed
-      description: test
-    - type: changed
-      description: test
-    - type: changed
-      description: test
-    - type: changed
-      description: test
-    - type: changed
-      description: test
-    - type: changed
-      description: test
-    - type: changed
-      description: test
-    - type: changed
-      description: Release 0.7.0 - Add Redis authentication to ArgoCD and update ArgoCD templates (#202)
-    - type: changed
-      description: 'Merge pull request #200 from codefresh-io/release-0.6.1'
-    - type: changed
-      description: trigger
-    - type: changed
-      description: 'Merge pull request #201 from codefresh-io/CR-23728'
-    - type: changed
-      description: readme
-    - type: changed
-      description: fix sealed secret shearing among clusters
-    - type: changed
-      description: 'Merge pull request #199 from codefresh-io/CR-23328-product-crd'
-    - type: changed
-      description: 'feat: added isConfigurationRuntime field (#195)'
-    - type: changed
-      description: Merge branch 'release-0.6.1' of github.com:codefresh-io/gitops-runtime-helm into CR-23328-product-crd
-    - type: changed
-      description: Change ArgoCD chart version
-    - type: changed
-      description: update README.md
-    - type: changed
-      description: 'version: 1.0.13'
+      description: test 0.9.1
 dependencies:
   - name: argo-cd
     repository: https://codefresh-io.github.io/argo-helm
