@@ -14,7 +14,9 @@ maintainers:
 annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
   artifacthub.io/changes: |-
-    - type: security
+    - type: changed
+      description: Update Chart.yaml
+    - type: changed
       description: test chart push
     - type: changed
       description: test chart push
