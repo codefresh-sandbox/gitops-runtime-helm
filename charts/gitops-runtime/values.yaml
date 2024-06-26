@@ -130,7 +130,7 @@ sealed-secrets:
       cpu: 200m
       memory: 512Mi
 # ---------------------------------------------------------------------------------------------------------------------
-# DOCS: https://github.com/codefresh-sandbox/argo-helm/blob/argo-cd-6.7.18-3-cap-2.10-2024.5.14-9315e75e1/charts/argo-cd
+# DOCS: https://github.com/codefresh-io/argo-helm/blob/argo-cd-6.7.18-3-cap-2.10-2024.5.14-9315e75e1/charts/argo-cd
 # ---------------------------------------------------------------------------------------------------------------------
 argo-cd:
   fullnameOverride: argo-cd
@@ -206,14 +206,14 @@ argo-cd:
           send:
           - cf-promotion-app-revision-changed-template
 # ---------------------------------------------------------------------------------------------------------------------
-# DOCS: https://github.com/codefresh-sandbox/argo-helm/blob/argo-events-2.0.9-1-cap-CR-19893/charts/argo-events
+# DOCS: https://github.com/codefresh-io/argo-helm/blob/argo-events-2.0.9-1-cap-CR-19893/charts/argo-events
 # ---------------------------------------------------------------------------------------------------------------------
 argo-events:
   fullnameOverride: argo-events
   crds:
     install: false
 # ---------------------------------------------------------------------------------------------------------------------
-# DOCS: https://github.com/codefresh-sandbox/argo-helm/blob/argo-workflows-0.40.9-1-v3.5.4-cap-CR-22243/charts/argo-workflows
+# DOCS: https://github.com/codefresh-io/argo-helm/blob/argo-workflows-0.40.9-1-v3.5.4-cap-CR-22243/charts/argo-workflows
 # ---------------------------------------------------------------------------------------------------------------------
 argo-workflows:
   fullnameOverride: argo
@@ -228,7 +228,7 @@ argo-workflows:
     # -- Install and upgrade CRDs
     install: true
 # ---------------------------------------------------------------------------------------------------------------------
-# DOCS: https://github.com/codefresh-sandbox/argo-helm/blob/argo-rollouts-2.32.5-4-additional-logs/charts/argo-rollouts
+# DOCS: https://github.com/codefresh-io/argo-helm/blob/argo-rollouts-2.32.5-4-additional-logs/charts/argo-rollouts
 # ---------------------------------------------------------------------------------------------------------------------
 argo-rollouts:
   enabled: true
@@ -410,7 +410,7 @@ internal-router:
     # -- Set number of pods that are unavailable after eviction as number or percentage
     maxUnavailable: ""
 # ---------------------------------------------------------------------------------------------------------------------
-# DOCS: https://github.com/codefresh-sandbox/codefresh-tunnel-charts/blob/codefresh-tunnel-client-0.1.15-helm/codefresh-tunnel-client/values.yaml
+# DOCS: https://github.com/codefresh-io/codefresh-tunnel-charts/blob/codefresh-tunnel-client-0.1.15-helm/codefresh-tunnel-client/values.yaml
 # ---------------------------------------------------------------------------------------------------------------------
 tunnel-client:
   # -- Will only be used if global.runtime.ingress.enabled = false
@@ -568,7 +568,7 @@ app-proxy:
     maxUnavailable: ""
 
 # ---------------------------------------------------------------------------------------------------------------------
-# DOCS: https://github.com/codefresh-sandbox/codefresh-gitops-operator/tree/codefresh-gitops-operator-1.0.13-helm/charts/codefresh-gitops-operator
+# DOCS: https://github.com/codefresh-io/codefresh-gitops-operator/tree/codefresh-gitops-operator-1.0.13-helm/charts/codefresh-gitops-operator
 # ---------------------------------------------------------------------------------------------------------------------
 gitops-operator:
   enabled: true
