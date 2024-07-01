@@ -15,6 +15,10 @@ annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
   artifacthub.io/changes: |-
     - type: changed
+      description: empty
+    - type: changed
+      description: 'chore: prepare release'
+    - type: changed
       description: test hotfix-5
     - type: changed
       description: test hotfix-4
