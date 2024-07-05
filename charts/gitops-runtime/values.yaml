@@ -678,3 +678,4 @@ gitops-operator:
 
 key: "value"
 foo: "bar"
+alice: "bob"
