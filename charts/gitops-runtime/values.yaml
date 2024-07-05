@@ -677,3 +677,4 @@ gitops-operator:
         memory: 64Mi
 
 key: "value"
+foo: "bar"
