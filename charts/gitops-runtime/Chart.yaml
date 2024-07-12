@@ -1,8 +1,8 @@
 apiVersion: v2
-appVersion: 0.0.1
+appVersion: 0.0.2
 description: A Helm chart for Codefresh gitops runtime
 name: gitops-runtime
-version: 1.0.0
+version: 1.0.1
 home: https://github.com/codefresh-io/gitops-runtime-helm
 icon: https://avatars1.githubusercontent.com/u/11412079?v=3
 keywords:
@@ -15,9 +15,9 @@ annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
   artifacthub.io/changes: |-
     - type: changed
-      description: 'fix: fix on main branch Fri Jul 12 10:31:19 +03 2024'
+      description: 'fix: fix on main branch Fri Jul 12 11:51:22 +03 2024'
     - type: changed
-      description: 'fix: fix on main branch Wed Jul 10 16:07:01 +03 2024'
+      description: 'fix: fix on main branch Fri Jul 12 11:51:15 +03 2024'
 dependencies:
   - name: argo-cd
     repository: https://codefresh-io.github.io/argo-helm
