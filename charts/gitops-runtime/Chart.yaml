@@ -15,11 +15,7 @@ annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
   artifacthub.io/changes: |-
     - kind: changed
-      description: patch - example patch on existing release draft (#2)
-    - kind: changed
-      description: Update Chart.yaml and changelog for 0.50.0 release
-    - kind: changed
-      description: Update codefresh-cm.yaml
+      description: patch - example patch on existing release draft (#3)
     - kind: changed
       description: 'chore: update README.md with HA example'
     - kind: changed
