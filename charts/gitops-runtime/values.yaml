@@ -757,8 +757,8 @@ cf-argocd-extras:
     container:
       image:
         registry: quay.io
-        repository: codefresh/dev/cf-argocd-extras
-        tag: fix-example-fix-on-stable-6b907f2
+        repository: codefresh/cf-argocd-extras
+        tag: fa998e2
     nodeSelector: {}
     tolerations: []
     affinity: {}
@@ -781,8 +781,8 @@ cf-argocd-extras:
     container:
       image:
         registry: quay.io
-        repository: codefresh/dev/cf-argocd-extras
-        tag: fix-example-fix-on-stable-6b907f2
+        repository: codefresh/cf-argocd-extras
+        tag: fa998e2
     nodeSelector: {}
     tolerations: []
     affinity: {}
