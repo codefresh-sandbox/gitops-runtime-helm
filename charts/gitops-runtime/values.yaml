@@ -758,8 +758,8 @@ cf-argocd-extras:
     container:
       image:
         registry: quay.io
-        repository: codefresh/dev/cf-argocd-extras
-        tag: feat-example-feature-on-main-6be925e
+        repository: codefresh/cf-argocd-extras
+        tag: 0d642f0
     nodeSelector: {}
     tolerations: []
     affinity: {}
@@ -782,8 +782,8 @@ cf-argocd-extras:
     container:
       image:
         registry: quay.io
-        repository: codefresh/dev/cf-argocd-extras
-        tag: feat-example-feature-on-main-6be925e
+        repository: codefresh/cf-argocd-extras
+        tag: 0d642f0
     nodeSelector: {}
     tolerations: []
     affinity: {}
