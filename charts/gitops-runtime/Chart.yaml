@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 0.1.72
 description: A Helm chart for Codefresh gitops runtime
 name: gitops-runtime
-version: 0.50.0
+version: 0.55.0.0
 home: https://github.com/codefresh-io/gitops-runtime-helm
 icon: https://avatars1.githubusercontent.com/u/11412079?v=3
 keywords:
@@ -15,37 +15,9 @@ annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
   artifacthub.io/changes: |-
     - kind: changed
+      description: 'prepare-version(0.50.0): prepare chart content for release (#1)'
+    - kind: changed
       description: patch - example patch on existing release draft (#3)
-    - kind: changed
-      description: 'chore: update README.md with HA example'
-    - kind: changed
-      description: 'chore: update values-ha example'
-    - kind: changed
-      description: bumped argocd to 8.0.6-8-cap-v3.0.2-2025-08-12-9c8dfae9 (#664)
-    - kind: changed
-      description: bumped app-proxy to 1.3707.0 closed ha gaps (#667)
-    - kind: changed
-      description: 'fix: remove checksum tests as they fail when chart version changes (#670)'
-    - kind: changed
-      description: updated codefresh-gitops-operator (#666)
-    - kind: changed
-      description: updated cli-v2, kubectl in runtime-installer (#661)
-    - kind: changed
-      description: using bitnamilegacy instead of bitnami (#653)
-    - kind: changed
-      description: 'chore(app-proxy): update cap-app-proxy image tags to 1.3702.0 (#659)'
-    - kind: changed
-      description: 'test: update platform mock(me) (#656)'
-    - kind: changed
-      description: 'fix: support failing release if app sync fails (#645)'
-    - kind: changed
-      description: 'chore(CR-30232): updated oauth2, golang.org/x/net, github.com/cloudflare (#639)'
-    - kind: changed
-      description: 'chore(app-proxy): update cap-app-proxy image tags to 1.3701.0 (#654)'
-    - kind: changed
-      description: updated cspd enrichers (#652)
-    - kind: changed
-      description: 'fix: update leader elector image tag to remove version prefix ''v'' (#651)'
 dependencies:
   - name: argo-cd
     repository: https://codefresh-io.github.io/argo-helm
