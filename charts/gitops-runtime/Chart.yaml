@@ -15,6 +15,16 @@ annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
   artifacthub.io/changes: |-
     - kind: changed
+      description: 'Merge pull request #18 from codefresh-sandbox/fix/alice'
+    - kind: changed
+      description: 'fix: alice'
+    - kind: changed
+      description: 'fix: alice'
+    - kind: changed
+      description: CI Automatic commit - align Chart version
+    - kind: changed
+      description: 'fix: alice'
+    - kind: changed
       description: 'fix: alice'
     - kind: changed
       description: 'feat: bar'
