@@ -13,6 +13,25 @@ maintainers:
     url: https://codefresh-io.github.io/
 annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: 'Merge pull request #22 from codefresh-sandbox/fix/alice'
+    - kind: changed
+      description: CI Automatic commit - align Chart version
+    - kind: changed
+      description: 'fix: alice'
+    - kind: changed
+      description: 'fix: alice'
+    - kind: changed
+      description: 'feat: bar'
+    - kind: changed
+      description: 'feat: foo'
+    - kind: changed
+      description: updated nginx (#662)
+    - kind: changed
+      description: 'fix(app-proxy): update cap-app-proxy image tags to 1.3718.0 (#678)'
+    - kind: changed
+      description: 'fix(app-proxy): update cap-app-proxy image tags to 1.3709.0 - simplify user cache (#673)'
 dependencies:
   - name: argo-cd
     repository: https://codefresh-io.github.io/argo-helm
