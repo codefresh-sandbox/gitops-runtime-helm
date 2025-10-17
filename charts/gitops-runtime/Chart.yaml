@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 0.1.72
 description: A Helm chart for Codefresh gitops runtime
 name: gitops-runtime
-version: 0.0.0
+version: 0.24.0
 home: https://github.com/codefresh-io/gitops-runtime-helm
 icon: https://avatars1.githubusercontent.com/u/11412079?v=3
 keywords:
@@ -13,32 +13,125 @@ maintainers:
     url: https://codefresh-io.github.io/
 annotations:
   artifacthub.io/alternativeName: "codefresh-gitops-runtime"
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: 'chore[cf-argocd-extras]: bumps cf-argocd-extras to version e746a97 (#819)'
+    - kind: changed
+      description: 'fix: update app-proxy image tags to 1.3820.0 (#804)'
+    - kind: changed
+      description: 'fix: update app-proxy image tags to 1.3819.0 (#802)'
+    - kind: changed
+      description: 'feat: runtime helm: add timestamps to failure and warnings (#796)'
+    - kind: changed
+      description: bump app proxy version (#795)
+    - kind: changed
+      description: 'fix: improve error handling (#791)'
+    - kind: changed
+      description: 'feat: remove sources server (#789)'
+    - kind: changed
+      description: 'fix: align reconciler requeue and error handling logic, add failure and warning error properties (#780)'
+    - kind: changed
+      description: update READE.md (#792)
+    - kind: changed
+      description: 'fix: app-proxy cors (#790)'
+    - kind: changed
+      description: 'feat: add separate redis for event-reporters/argo-gateway and app-proxy (#751)'
+    - kind: changed
+      description: 'fix: security vulnerabilities in enrichment images  (#788)'
+    - kind: changed
+      description: 'refactor(cf-argocd-extras): replace with argo-api-gateway, runtime and cluster event-reporters (#744)'
+    - kind: changed
+      description: 'feat: get commit author avatar url on getPromotionValues step (#778)'
+    - kind: changed
+      description: 'fix: promotion values can''t be empty (#772)'
+    - kind: changed
+      description: 'feat: add runWorkflow step handler (#785)'
+    - kind: changed
+      description: 'chore: move argo-cd auth values to global.integrations.argo-cd.server.auth (#768)'
+    - kind: changed
+      description: added runtime label to codefresh-cm (#763)
+    - kind: changed
+      description: bumps argo-cd helm chart for redis 8.2.1 upgrade (#765)
+    - kind: changed
+      description: bump app proxy version (#760)
+    - kind: changed
+      description: 'feat: add error messages for appStatus (#745)'
+    - kind: changed
+      description: '[gitops-operator]fix: promotions using pull requests do not resume after the pr has been merged (to main) (#752)'
+    - kind: changed
+      description: '[cf-argocd-extras]chore: add tests (#741)'
+    - kind: changed
+      description: update enrichment images tag (#746)
+    - kind: changed
+      description: 'feat: add promoteAppWithCommitHandler implementation [gitops-operator] (#738)'
+    - kind: changed
+      description: 'chore: disable component tests (#740)'
+    - kind: changed
+      description: 'chore: update cap-app-proxy image tags to 1.3772.0 (#737)'
+    - kind: changed
+      description: 'chore: security fixes for argo rollouts v1.7.2 (#730)'
+    - kind: changed
+      description: 'feat: add GetPromotionValuesHandler and VerifyAppHandler implementations (#736)'
+    - kind: changed
+      description: '[gitops-operator]fix: security vulnerability (#734)'
+    - kind: changed
+      description: 'feat: Add PromotionTaskReconciler (#677)'
+    - kind: changed
+      description: 'fix: service account for cleanup runtime resources (#726)'
+    - kind: changed
+      description: '[cf-argocd-extras]chore(CR-30961): security fix (#725)'
+    - kind: changed
+      description: updated sealed-secrets-controller (#723)
+    - kind: changed
+      description: 'chore: Fix security vulnerabilities for argo-workflows and argo-events (#716)'
+    - kind: changed
+      description: 'feat: update cap-app-proxy image tags to 1.3750.0'
+    - kind: changed
+      description: 'feat: bump evernt-reporter to 88898aa (#676)'
+    - kind: changed
+      description: 'feat: conditional registration of the rgs controller (#709)'
+    - kind: changed
+      description: 'feat: added sec advisory GHSA-786q-9hcg-v9ff bumped argocd to 8.0.6-9-cap-v… (#703)'
+    - kind: changed
+      description: updated cap-app-proxy with security fixes (#702)
+    - kind: changed
+      description: 'installer: updated cli-v2, kubectl (#697)'
+    - kind: changed
+      description: updated frpc (#693)
+    - kind: changed
+      description: update cli-v2 in installer - fix token validation code (#694)
+    - kind: changed
+      description: 'chore(app-proxy): update cap-app-proxy image tags to 1.3727.0 (#691)'
+    - kind: changed
+      description: updated prometheus-nats-exporter, nats-server-config-reloader for jetstream (#687)
+    - kind: changed
+      description: 'feat(conponent-tests): add release branches to pipeline trigger (#684)'
 dependencies:
-- name: argo-cd
-  repository: https://codefresh-io.github.io/argo-helm
-  condition: argo-cd.enabled
-  version: 8.0.6-9-cap-v3.0.2-2025-09-08-9b30d922
-- name: argo-events
-  repository: https://codefresh-io.github.io/argo-helm
-  version: 2.4.9-cap-CR-30841
-  condition: argo-events.enabled
-- name: argo-workflows
-  repository: https://codefresh-io.github.io/argo-helm
-  version: 0.45.16-v3.6.7-cap-CR-30835
-  condition: argo-workflows.enabled
-- name: argo-rollouts
-  repository: https://codefresh-io.github.io/argo-helm
-  version: 2.37.3-7-v1.7.2-cap-OSS-697
-  condition: argo-rollouts.enabled
-- name: sealed-secrets
-  repository: https://bitnami-labs.github.io/sealed-secrets/
-  version: 2.17.2
-- name: codefresh-tunnel-client
-  repository: oci://quay.io/codefresh/charts
-  version: 0.1.22
-  alias: tunnel-client
-  condition: tunnel-client.enabled
-- name: redis-ha
-  version: 4.33.4
-  repository: https://dandydeveloper.github.io/charts/
-  condition: redis-ha.enabled
+  - name: argo-cd
+    repository: https://codefresh-io.github.io/argo-helm
+    condition: argo-cd.enabled
+    version: 8.0.6-9-cap-v3.0.2-2025-09-08-9b30d922
+  - name: argo-events
+    repository: https://codefresh-io.github.io/argo-helm
+    version: 2.4.9-cap-CR-30841
+    condition: argo-events.enabled
+  - name: argo-workflows
+    repository: https://codefresh-io.github.io/argo-helm
+    version: 0.45.16-v3.6.7-cap-CR-30835
+    condition: argo-workflows.enabled
+  - name: argo-rollouts
+    repository: https://codefresh-io.github.io/argo-helm
+    version: 2.37.3-7-v1.7.2-cap-OSS-697
+    condition: argo-rollouts.enabled
+  - name: sealed-secrets
+    repository: https://bitnami-labs.github.io/sealed-secrets/
+    version: 2.17.2
+  - name: codefresh-tunnel-client
+    repository: oci://quay.io/codefresh/charts
+    version: 0.1.22
+    alias: tunnel-client
+    condition: tunnel-client.enabled
+  - name: redis-ha
+    version: 4.33.4
+    repository: https://dandydeveloper.github.io/charts/
+    condition: redis-ha.enabled
